@@ -1,5 +1,5 @@
 // Decorator Pattern Example
-public class Proxy {
+public class Decorator {
     public static void main(String[] args) {
         // Basic Email Notification
         Notifier notifier = new EmailNotifier();
