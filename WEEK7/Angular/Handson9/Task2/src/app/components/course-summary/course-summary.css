@@ -1,0 +1,43 @@
+.summary-card{
+
+    width:350px;
+    margin:20px auto;
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    text-align:center;
+
+}
+
+.summary-card h2{
+
+    color:#1976d2;
+    margin-bottom:20px;
+
+}
+
+.summary-item{
+
+    margin:15px 0;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:8px;
+
+}
+
+.summary-item h3{
+
+    margin:0;
+    color:#444;
+
+}
+
+.summary-item p{
+
+    margin-top:10px;
+    font-size:24px;
+    font-weight:bold;
+    color:#1976d2;
+
+}

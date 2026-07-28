@@ -1,0 +1,15 @@
+<h2>Available Courses</h2>
+
+<p>Loading: {{ isLoading }}</p>
+
+<p>Total Courses: {{ filteredCourses.length }}</p>
+
+<hr>
+
+<div *ngFor="let course of filteredCourses">
+
+  <h3>{{ course.name }}</h3>
+
+  <p>{{ course.code }}</p>
+
+</div>
