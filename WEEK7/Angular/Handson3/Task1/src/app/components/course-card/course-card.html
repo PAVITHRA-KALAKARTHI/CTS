@@ -1,0 +1,31 @@
+<div class="card">
+
+<h3>{{course.name}}</h3>
+
+<p>{{course.code}}</p>
+
+<p>{{course.credits}} Credits</p>
+
+<div [ngSwitch]="course.gradeStatus">
+
+<p *ngSwitchCase="'passed'" class="passed">
+
+Passed
+
+</p>
+
+<p *ngSwitchCase="'failed'" class="failed">
+
+Failed
+
+</p>
+
+<p *ngSwitchCase="'pending'" class="pending">
+
+Pending
+
+</p>
+
+</div>
+
+</div>
