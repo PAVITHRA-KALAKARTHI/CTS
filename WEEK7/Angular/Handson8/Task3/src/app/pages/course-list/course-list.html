@@ -1,0 +1,36 @@
+<h2>Available Courses</h2>
+
+<div>
+
+  <input
+    type="text"
+    placeholder="Search courses..."
+    [(ngModel)]="searchTerm"
+    (input)="onSearch()">
+
+</div>
+
+<br>
+
+<div *ngIf="isLoading">
+
+  <p>Loading courses...</p>
+
+</div>
+
+<div *ngIf="errorMessage" class="error">
+
+  {{ errorMessage }}
+
+</div>
+
+<div
+  class="course-container"
+  *ngIf="!isLoading">
+
+  <app-course-card
+    *ngFor="let course of filteredCourses; trackBy: trackByCourseId"
+    [course]="course">
+  </app-course-card>
+
+</div>
