@@ -1,0 +1,43 @@
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { CourseCard } from '../../components/course-card/course-card';
+import { CourseService } from '../../services/course.service';
+
+@Component({
+  selector: 'app-course-list',
+  standalone: true,
+  imports: [
+    CommonModule,
+    CourseCard
+  ],
+  templateUrl: './course-list.html',
+  styleUrl: './course-list.css'
+})
+export class CourseList implements OnInit {
+
+  courses: any[] = [];
+
+  isLoading = true;
+
+  constructor(
+    private courseService: CourseService
+  ) {}
+
+  ngOnInit(): void {
+
+    setTimeout(() => {
+
+      this.courses = this.courseService.getCourses();
+
+      this.isLoading = false;
+
+    }, 1500);
+
+  }
+
+  trackByCourseId(index: number, course: any) {
+    return course.id;
+  }
+
+}
