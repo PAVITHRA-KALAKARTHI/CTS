@@ -1,0 +1,75 @@
+<div class="form-container">
+
+  <div class="form-card">
+
+    <h2>Reactive Enrollment Form</h2>
+
+    <form
+      [formGroup]="enrollForm"
+      (ngSubmit)="onSubmit()">
+
+      <!-- Student Name -->
+      <label>Student Name</label>
+
+      <input
+        type="text"
+        formControlName="studentName">
+
+      <!-- Email -->
+      <label>Email</label>
+
+      <input
+        type="email"
+        formControlName="studentEmail">
+
+      <!-- Course ID -->
+      <label>Course ID</label>
+
+      <input
+        type="number"
+        formControlName="courseId">
+
+      <!-- Semester -->
+      <label>Preferred Semester</label>
+
+      <select formControlName="preferredSemester">
+        <option value="Odd">Odd</option>
+        <option value="Even">Even</option>
+      </select>
+
+      <!-- Checkbox -->
+      <div class="checkbox-group">
+
+        <input
+          type="checkbox"
+          id="agree"
+          formControlName="agreeToTerms">
+
+        <label for="agree">
+          I agree to the Terms and Conditions
+        </label>
+
+      </div>
+
+      <!-- Checkbox Error -->
+      <span
+        class="error"
+        *ngIf="
+          enrollForm.get('agreeToTerms')?.touched &&
+          enrollForm.get('agreeToTerms')?.hasError('required')
+        ">
+        You must accept the terms.
+      </span>
+
+      <!-- Submit -->
+      <button
+        type="submit"
+        [disabled]="enrollForm.invalid">
+        Submit
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
