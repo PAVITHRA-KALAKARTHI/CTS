@@ -1,0 +1,67 @@
+<div class="container">
+
+  <h1>{{ portalName }}</h1>
+
+  <h2>Welcome to Student Course Portal</h2>
+
+  <div class="stats">
+
+    <div class="card">
+      <h3>Total Courses</h3>
+      <p>{{ coursesAvailable }}</p>
+    </div>
+
+    <div class="card">
+      <h3>Enrolled Courses</h3>
+      <p>{{ enrolledCourses }}</p>
+    </div>
+
+    <div class="card">
+      <h3>Current GPA</h3>
+      <p>{{ gpa }}</p>
+    </div>
+
+  </div>
+
+  <hr>
+ <app-course-summary></app-course-summary>
+  <button
+    [disabled]="!isPortalActive"
+    (click)="onEnrollClick()">
+
+    Enroll Now
+
+  </button>
+
+  <p class="message">
+
+    {{ message }}
+
+  </p>
+
+  <hr>
+
+  <label for="search">
+
+    Search Course
+
+  </label>
+
+  <br><br>
+
+  <input
+    id="search"
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search here">
+
+  <p>
+
+    Searching for:
+    <strong>{{ searchTerm }}</strong>
+
+  </p>
+  <br><br>
+  <app-notification></app-notification>
+
+</div>
