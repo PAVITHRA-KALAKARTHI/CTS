@@ -1,0 +1,47 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "name": "Angular",
+      "code": "ANG101",
+      "credits": 1,
+      "gradeStatus": "passed",
+      "enrolled": true
+    },
+    {
+      "id": "2",
+      "name": "Java",
+      "code": "JAVA201",
+      "credits": 3,
+      "gradeStatus": "failed",
+      "enrolled": false
+    },
+    {
+      "id": "3",
+      "name": "React",
+      "code": "REA301",
+      "credits": 0,
+      "gradeStatus": "pending",
+      "enrolled": true
+    },
+    {
+      "id": "4",
+      "name": "Spring Boot",
+      "code": "SPR401",
+      "credits": 4,
+      "gradeStatus": "passed",
+      "enrolled": true
+    },
+    {
+      "id": "5",
+      "name": "Node JS",
+      "code": "NODE501",
+      "credits": 2,
+      "gradeStatus": "pending",
+      "enrolled": false
+    }
+  ],
+  "students": [],
+  "enrollments": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
